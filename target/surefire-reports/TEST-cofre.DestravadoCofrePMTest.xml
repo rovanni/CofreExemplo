@@ -61,11 +61,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarSenhaComMenosDeSeis" time="0.127"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarSenhaComMenosDeSeis" time="0.125"/>
   <testcase classname="cofre.DestravadoCofrePMTest" name="testClear" time="0"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testGravarSenhaValidaPortaFechadaDestravada" time="0.004"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarNumerosPortaFechadaEDepoisAbrirEDigitar" time="0.001"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testPortaNaoFechada" time="0.001"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarUmNumeroPortaFechada" time="0.001"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testGravarSenhaValidaPortaFechadaDestravada" time="0"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarNumerosPortaFechadaEDepoisAbrirEDigitar" time="0"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testPortaNaoFechada" time="0"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarUmNumeroPortaFechada" time="0"/>
   <testcase classname="cofre.DestravadoCofrePMTest" name="testInicializacao" time="0"/>
 </testsuite>

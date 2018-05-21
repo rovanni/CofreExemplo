@@ -10,7 +10,7 @@ public class CofrePM {
     private String display;
     private SensorPorta sensorPorta;
     private Memoria memoria;
-    public static int OK = 99;
+    public static final int OK = 99;
 
     public CofrePM(SensorPorta sensorPorta, Memoria memoria) {
         this.sensorPorta = sensorPorta;
@@ -27,7 +27,7 @@ public class CofrePM {
         this.display = display;
     }
     
-    public void ok() {
+    public void verificarOk() {
         if(! sensorPorta.fechada())
             display = "Feche a porta antes de digitar a senha";
         else {

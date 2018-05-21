@@ -10,7 +10,9 @@ public class ValidacaoHelper {
             Integer.parseInt(senha);
             return true;
         }
-        catch(NumberFormatException e){}
+        catch(NumberFormatException e){
+        
+        }
         return false;    
     }
     
