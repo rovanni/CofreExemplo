@@ -9,7 +9,7 @@ import static org.mockito.Mockito.*;
  *
  * @author andreendo
  */
-public class DestravadoCofrePMTest extends CofrePMTest {
+public class DestravadoCofrePMTest extends Cofre {
     
     @Before
     public void before() {
