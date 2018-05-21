@@ -15,7 +15,7 @@ public class ValidacaoHelper {
             return true;
         }
         catch(NumberFormatException e){
-            // Ignore
+            // ...
         }
         return false;    
     }
