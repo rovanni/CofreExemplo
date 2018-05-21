@@ -1,0 +1,6 @@
+language: java
+
+addons:
+  sonarcloud:
+    organization: "nascimento-github"
+
