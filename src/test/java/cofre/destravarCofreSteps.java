@@ -79,7 +79,7 @@ public class destravarCofreSteps extends Cofre{
 
     @Quando("^e pressione o botao ok$")
     public void e_pressione_o_botao_ok() throws Exception {
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
     }
 
     @Dado("^que eu entrei com o numero (\\d+)$")
@@ -112,7 +112,7 @@ public class destravarCofreSteps extends Cofre{
 
     @Quando("^eu pressionei o botao ok$")
     public void eu_pressionei_o_botao_ok() throws Exception {
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
     }
 
     @Quando("^verificar o display$")
@@ -127,7 +127,7 @@ public class destravarCofreSteps extends Cofre{
     }
     @Quando("^pressionar o botao ok$")
     public void pressionar_o_botao_ok() throws Exception {
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
     }
 
     @Então("^o display mostrara a seguinte mensagem \"([^\"]*)\"$")

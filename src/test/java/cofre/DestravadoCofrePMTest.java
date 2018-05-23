@@ -46,7 +46,7 @@ public class DestravadoCofrePMTest extends Cofre {
             cofrePM.clear();
         }
         
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
         assertEquals("Feche a porta antes de digitar a senha", cofrePM.getDisplay());
     }
     
@@ -83,7 +83,7 @@ public class DestravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(6);
         assertEquals("193566", cofrePM.getDisplay());
         
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
         assertEquals("Senha salva. Cofre trancado", cofrePM.getDisplay());
 
         verify(sensorMock).travar();
@@ -98,14 +98,14 @@ public class DestravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(1);
         assertEquals("1", cofrePM.getDisplay());
         
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
         assertEquals("Senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());
         
         cofrePM.pressButton(1);
         cofrePM.pressButton(1);
         assertEquals("11", cofrePM.getDisplay());
         
-        cofrePM.pressionar_Ok();
+        cofrePM.pressionarOk();
         assertEquals("Senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());        
     }     
     

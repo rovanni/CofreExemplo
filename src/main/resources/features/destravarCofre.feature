@@ -42,7 +42,7 @@ Funcionalidade: Destravar Cofre
     E depois digito o numero 8
     Quando verificar o display ele mostrará a mensagem "98"
 
-    Cenário: abrir a porta e digitar 
+    Cenário: abrir a porta e digitar um numero e fechar porta e digitar um numero
     Dado abrir a porta e digitar o numero 7
     Quando verifico o display para ver a mensagem "Feche a porta antes de digitar a senha"
     Dado fechar a porta e digitar o numero 7

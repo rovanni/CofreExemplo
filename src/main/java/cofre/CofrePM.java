@@ -27,7 +27,7 @@ public class CofrePM {
         this.display = display;
     }
     
-    public void pressionar_Ok() {
+    public void pressionarOk() {
         if(! sensorPorta.fechada())
             display = "Feche a porta antes de digitar a senha";
         else {
