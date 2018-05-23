@@ -1,8 +1,8 @@
 package cofre;
 
-import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 /**
@@ -31,7 +31,6 @@ public class DestravadoCofrePMTest extends Cofre {
     @Test
     public void testClear() {
         cofrePM.clear();
-        
         assertEquals("", cofrePM.getDisplay());
     }
 
@@ -47,7 +46,7 @@ public class DestravadoCofrePMTest extends Cofre {
             cofrePM.clear();
         }
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("Feche a porta antes de digitar a senha", cofrePM.getDisplay());
     }
     
@@ -84,7 +83,7 @@ public class DestravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(6);
         assertEquals("193566", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("Senha salva. Cofre trancado", cofrePM.getDisplay());
 
         verify(sensorMock).travar();
@@ -99,15 +98,15 @@ public class DestravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(1);
         assertEquals("1", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
-        assertEquals("senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());
+        cofrePM.pressionar_Ok();
+        assertEquals("Senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());
         
         cofrePM.pressButton(1);
         cofrePM.pressButton(1);
         assertEquals("11", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
-        assertEquals("senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());        
+        cofrePM.pressionar_Ok();
+        assertEquals("Senha precisa de 6 digitos. Tente novamente", cofrePM.getDisplay());        
     }     
     
     @Test

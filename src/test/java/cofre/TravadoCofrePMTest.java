@@ -36,7 +36,7 @@ public class TravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(6);
         assertEquals("123466", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("senha errada. Tente novamente", cofrePM.getDisplay());
     }
     
@@ -48,14 +48,14 @@ public class TravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(1);
         assertEquals("1", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("senha errada. Tente novamente", cofrePM.getDisplay());
         
         cofrePM.pressButton(1);
         cofrePM.pressButton(1);
         assertEquals("11", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("senha errada. Tente novamente", cofrePM.getDisplay());        
     }    
     
@@ -72,7 +72,7 @@ public class TravadoCofrePMTest extends Cofre {
         cofrePM.pressButton(6);
         assertEquals("123466", cofrePM.getDisplay());
         
-        cofrePM.verificarOk();
+        cofrePM.pressionar_Ok();
         assertEquals("senha correta. Cofre aberto", cofrePM.getDisplay());
         
         verify(sensorMock, times(2)).destravar(); //destravar eh chamado pelo construtor tb

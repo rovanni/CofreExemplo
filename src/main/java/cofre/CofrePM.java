@@ -27,7 +27,7 @@ public class CofrePM {
         this.display = display;
     }
     
-    public void verificarOk() {
+    public void pressionar_Ok() {
         if(! sensorPorta.fechada())
             display = "Feche a porta antes de digitar a senha";
         else {
@@ -38,14 +38,15 @@ public class CofrePM {
         }
     }
 
-    private void realizarFechamento() {
+
+    public void realizarFechamento() {
         if(ehSenhaValida(display)) {
             memoria.salvarSenha(display);
             sensorPorta.travar();
             display = "Senha salva. Cofre trancado";
         }
         else 
-            display = "senha precisa de 6 digitos. Tente novamente";
+            display = "Senha precisa de 6 digitos. Tente novamente";
     }
 
     private void realizarAbertura() {
