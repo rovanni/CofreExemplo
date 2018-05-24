@@ -11,9 +11,9 @@ import static org.mockito.Mockito.*;
  *
  * @author Luciano Rovanni <luciano at luciano.rovanni>
  */
-public class DestravarCofreSteps extends Cofre{
+public class DestravadoCofrePMSteps extends Cofre{
 
-    public DestravarCofreSteps() {
+    public DestravadoCofrePMSteps() {
         sensorMock = mock(SensorPorta.class);
         memoriaMock = mock(Memoria.class);
         cofrePM = new CofrePM(sensorMock, memoriaMock);

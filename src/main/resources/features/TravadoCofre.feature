@@ -19,7 +19,7 @@ para retirar os itens guardados.
         Quando clicar no botao ok
         Então será exibi a seguinte mensagem "senha errada. Tente novamente"
 
-    Cenário: teste digitar senha valida
+    Cenário: teste digitar senha válida
         Dado que informe a senha 1 2 3 4 5 6 com a porta fechada e travada
         Quando pressionar o botão ok
         Então será exibida a mensagem "senha correta. Cofre aberto" e a porta vai abrir

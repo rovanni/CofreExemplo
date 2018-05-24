@@ -13,9 +13,9 @@ import static org.mockito.Mockito.when;
  *
  * @author Luciano Rovanni <luciano at luciano.rovanni>
  */
-public class TravadoCofreSteps extends Cofre {
+public class TravadoCofrePMSteps extends Cofre {
     
-    public TravadoCofreSteps() {
+    public TravadoCofrePMSteps() {
         sensorMock = mock(SensorPorta.class);
         memoriaMock = mock(Memoria.class);
         cofrePM = new CofrePM(sensorMock, memoriaMock);    
@@ -100,7 +100,7 @@ public class TravadoCofreSteps extends Cofre {
         assertEquals(arg1, cofrePM.getDisplay());
     }    
     //    
-    //  Cenário: teste digitar senha valida    
+    //  Cenário: teste digitar senha válida    
     //   
     @Dado("^que informe a senha (\\d+) (\\d+) (\\d+) (\\d+) (\\d+) (\\d+) com a porta fechada e travada$")
     public void que_informe_a_senha_com_a_porta_fechada_e_travada(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) throws Exception {
