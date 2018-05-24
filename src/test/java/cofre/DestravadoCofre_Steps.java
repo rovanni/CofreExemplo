@@ -44,7 +44,7 @@ public class DestravadoCofre_Steps extends Cofre{
         verify(sensorMock).destravar();        
     }    
     //
-    //Cenário: limpar display    
+    //Cenário: teste para limpar display   
     //
     @Dado("^que ao digitar o numero (\\d+)$")
     public void que_ao_digitar_o_numero(int arg1) throws Exception {
@@ -65,12 +65,12 @@ public class DestravadoCofre_Steps extends Cofre{
         assertEquals(arg1, cofrePM.getDisplay());        
     }
     //
-    //Esquema do Cenário: testar com a porta aberta    
+    //Esquema do Cenário: testar com a porta não fechada    
     //
-    @Dado("^que digite um (\\d+) com a porta aberta$")
-    public void que_digite_um_com_a_porta_aberta(int arg1) throws Exception {
+    @Dado("^que digite um (\\d+) com a porta não fechada$")
+    public void que_digite_um_com_a_porta_não_fechada(int arg1) throws Exception {
         cofrePM.pressButton(arg1);
-    }
+    }    
 
     @Quando("^e pressionar o botao ok$")
     public void e_pressionar_o_botao_ok() throws Exception {
@@ -79,7 +79,7 @@ public class DestravadoCofre_Steps extends Cofre{
 
     @Então("^uma mensagem deve ser exibida no \"([^\"]*)\"$")
     public void uma_mensagem_deve_ser_exibida_no(String arg1) throws Exception {
-        assertEquals("Feche a porta antes de digitar a senha", cofrePM.getDisplay());
+        assertEquals(arg1, cofrePM.getDisplay());
         cofrePM.clear();        
     }
     //
@@ -131,11 +131,15 @@ public class DestravadoCofre_Steps extends Cofre{
     @Quando("^eu pressionar o botao ok$")
     public void eu_pressionar_o_botao_ok() throws Exception {
         cofrePM.pressionarOk();
+        verify(memoriaMock).salvarSenha("123456");  
+        assertEquals("Senha salva. Cofre trancado", cofrePM.getDisplay());
     }
     
     @Então("^o display deve mostrar a mensagem \"([^\"]*)\"$")
     public void o_display_deve_mostrar_a_mensagem(String arg1) throws Exception {
         assertEquals(arg1, cofrePM.getDisplay());  
+        verify(sensorMock).travar();
+      
     }
     //
     //    Cenário: digitar senha com menos de seis digitos

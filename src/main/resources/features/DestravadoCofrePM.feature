@@ -2,21 +2,21 @@
 @DestravadoCofrePM_Steps.java
 Funcionalidade: Etapas para destravar Cofre
 Ao hospedar no hotel recebo uma senha para utilizar o cofre,
-eu quero destravar o cofre com a senha fornecida,
+e desejo destravar o cofre com a senha fornecida,
 para guardar itens de valor.
 
   Cenário: teste inicialização
     Quando ao olhar para o display verifico a mensagem "Entre com a senha 6 digitos"
     Então verifico se a porta esta fechada
 
-  Cenário: limpar display
+  Cenário: teste para limpar display
     Dado digito o numero 1
     E digito o numero 2
     Quando pressionar o botao clear
     Então o display mostra a mensagem ""
 
- Esquema do Cenário: testar com a porta aberta
-    Dado que digite um <numero> com a porta aberta
+ Esquema do Cenário: testar com a porta não fechada
+    Dado que digite um <numero> com a porta não fechada
     Quando e pressionar o botao ok
     Então uma mensagem deve ser exibida no <display>
     Exemplos: 
@@ -37,12 +37,12 @@ para guardar itens de valor.
     Quando olhar para o display verifico a mensagem "0"
 
   Cenário: gravar senha valida porta fechada destravada
-    Dado que eu entrei com o numero 6
-    E digito o numero 5
-    E digito mais um numero 4
-    E digito outro numero 3
-    E digito também numero 2
-    E digito mais outro numero 1
+    Dado que eu entrei com o numero 1
+    E digito o numero 2
+    E digito mais um numero 3
+    E digito outro numero 4
+    E digito também numero 5
+    E digito mais outro numero 6
     Quando eu pressionar o botao ok
     Então o display deve mostrar a mensagem "Senha salva. Cofre trancado"
 
