@@ -1,5 +1,5 @@
 # language: pt
-@TravadoCofreSteps.java
+@TravadoCofrePM_Steps.java
 Funcionalidade: destravar Cofre para retirar itens
 Eu quero destravar o cofre com a senha utilizada
 para retirar os itens guardados.

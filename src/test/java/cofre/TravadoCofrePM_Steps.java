@@ -13,9 +13,9 @@ import static org.mockito.Mockito.when;
  *
  * @author Luciano Rovanni <luciano at luciano.rovanni>
  */
-public class TravadoCofrePMSteps extends Cofre {
+public class TravadoCofrePM_Steps extends Cofre {
     
-    public TravadoCofrePMSteps() {
+    public TravadoCofrePM_Steps() {
         sensorMock = mock(SensorPorta.class);
         memoriaMock = mock(Memoria.class);
         cofrePM = new CofrePM(sensorMock, memoriaMock);    
